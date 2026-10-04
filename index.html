@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="An accessible interactive photo gallery exploring beautiful places and moments in Japan.">
+
+    <title>Japan | Between Neon & Silence</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Skip link for keyboard users -->
+    <a class="skip-link" href="#main-content">
+        Skip to Main Content
+    </a>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="site-header">
+
+        <div class="nav-container">
+
+            <a class="logo" href="index.html" aria-label="Japan Gallery home">
+                JP<span>.</span>
+            </a>
+
+            <nav aria-label="Main navigation">
+
+                <ul class="nav-list">
+
+                    <li>
+                        <a href="#gallery">Gallery</a>
+                    </li>
+
+                    <li>
+                        <a href="#story">Story</a>
+                    </li>
+
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <button
+                id="themeButton"
+                class="theme-button"
+                type="button"
+                aria-label="Change visual theme">
+                ◐
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main id="main-content">
+
+
+        <!-- HERO -->
+
+        <section class="hero" aria-labelledby="hero-title">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    JAPAN • PHOTOGRAPHY • 2026
+                </p>
+
+                <h1 id="hero-title">
+                    Between Neon<br>
+                    <span>&amp; Silence</span>
+                </h1>
+
+                <p class="hero-description">
+                    A visual journey through Japan, from restless city lights
+                    to quiet mountain mornings.
+                </p>
+
+                <a class="hero-button" href="#gallery">
+                    Explore the gallery
+                    <span aria-hidden="true">↓</span>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= GALLERY ================= -->
+
+        <section id="gallery" class="gallery-section"
+            aria-labelledby="gallery-title">
+
+            <div class="section-intro">
+
+                <div>
+
+                    <p class="section-number">
+                        01 / 02
+                    </p>
+
+                    <h2 id="gallery-title">
+                        Six moments,
+                        <br>
+                        one journey.
+                    </h2>
+
+                </div>
+
+                <p class="section-description">
+                    Move your mouse over a photograph, or use the
+                    <strong>Tab</strong> key to explore the gallery.
+                </p>
+
+            </div>
+
+
+            <!-- Large interactive preview -->
+
+            <div
+                id="image"
+                class="image-preview"
+                aria-live="polite"
+                aria-label="Interactive image preview">
+
+                <div class="preview-content">
+
+                    <span class="preview-symbol" aria-hidden="true">
+                        ✦
+                    </span>
+
+                    <p class="preview-label">
+                        Interactive Gallery
+                    </p>
+
+                    <h3>
+                        Hover or focus on a photograph
+                    </h3>
+
+                    <p>
+                        Choose an image below to bring it into focus.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Gallery cards -->
+
+            <div class="gallery-grid">
+
+
+                <!-- IMAGE 1 -->
+
+                <figure
+                    class="gallery-card"
+                    onmouseover="upDate(this)"
+                    onmouseleave="undo(this)"
+                    onfocus="upDate(this)"
+                    onblur="undo(this)"
+                >
+
+                    <div class="image-wrapper">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=85"
+                            alt="Tokyo skyline glowing with colorful lights at night"
+                        >
+
+                        <span class="image-number"
+                            aria-hidden="true">
+                            01
+                        </span>
+
+                    </div>
+
+                    <figcaption>
+
+                        <span class="location">
+                            Tokyo
+                        </span>
+
+                        <span class="caption-title">
+                            Neon Pulse
+                        </span>
+
+                    </figcaption>
+
+                </figure>
+
+
+                <!-- IMAGE 2 -->
+
+                <figure
+                    class="gallery-card"
+                    onmouseover="upDate(this)"
+                    onmouseleave="undo(this)"
+                    onfocus="upDate(this)"
+                    onblur="undo(this)"
+                >
+
+                    <div class="image-wrapper">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=85"
+                            alt="Traditional Kyoto street surrounded by historic wooden buildings"
+                        >
+
+                        <span class="image-number"
+                            aria-hidden="true">
+                            02
+                        </span>
+
+                    </div>
+
+                    <figcaption>
+
+                        <span class="location">
+                            Kyoto
+                        </span>
+
+                        <span class="caption-title">
+                            Old Streets
+                        </span>
+
+                    </figcaption>
+
+                </figure>
+
+
+                <!-- IMAGE 3 -->
+
+                <figure
+                    class="gallery-card"
+                    onmouseover="upDate(this)"
+                    onmouseleave="undo(this)"
+                    onfocus="upDate(this)"
+                    onblur="undo(this)"
+                >
+
+                    <div class="image-wrapper">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?auto=format&fit=crop&w=1200&q=85"
+                            alt="Snow covered Mount Fuji rising above a peaceful Japanese landscape"
+                        >
+
+                        <span class="image-number"
+                            aria-hidden="true">
+                            03
+                        </span>
+
+                    </div>
+
+                    <figcaption>
+
+                        <span class="location">
+                            Fuji
+                        </span>
+
+                        <span class="caption-title">
+                            First Light
+                        </span>
+
+                    </figcaption>
+
+                </figure>
+
+
+                <!-- IMAGE 4 -->
+
+                <figure
+                    class="gallery-card"
+                    onmouseover="upDate(this)"
+                    onmouseleave="undo(this)"
+                    onfocus="upDate(this)"
+                    onblur="undo(this)"
+                >
+
+                    <div class="image-wrapper">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=1200&q=85"
+                            alt="Japanese temple surrounded by green trees and traditional architecture"
+                        >
+
+                        <span class="image-number"
+                            aria-hidden="true">
+                            04
+                        </span>
+
+                    </div>
+
+                    <figcaption>
+
+                        <span class="location">
+                            Nara
+                        </span>
+
+                        <span class="caption-title">
+                            Quiet Green
+                        </span>
+
+                    </figcaption>
+
+                </figure>
+
+
+                <!-- IMAGE 5 -->
+
+                <figure
+                    class="gallery-card"
+                    onmouseover="upDate(this)"
+                    onmouseleave="undo(this)"
+                    onfocus="upDate(this)"
+                    onblur="undo(this)"
+                >
+
+                    <div class="image-wrapper">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1513407030348-c983a97b98d8?auto=format&fit=crop&w=1200&q=85"
+                            alt="Japanese street with glowing signs and pedestrians after sunset"
+                        >
+
+                        <span class="image-number"
+                            aria-hidden="true">
+                            05
+                        </span>
+
+                    </div>
+
+                    <figcaption>
+
+                        <span class="location">
+                            Osaka
+                        </span>
+
+                        <span class="caption-title">
+                            After Sunset
+                        </span>
+
+                    </figcaption>
+
+                </figure>
+
+
+                <!-- IMAGE 6 -->
+
+                <figure
+                    class="gallery-card"
+                    onmouseover="upDate(this)"
+                    onmouseleave="undo(this)"
+                    onfocus="upDate(this)"
+                    onblur="undo(this)"
+                >
+
+                    <div class="image-wrapper">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?auto=format&fit=crop&w=1200&q=85"
+                            alt="Traditional Japanese pagoda overlooking a city surrounded by mountains"
+                        >
+
+                        <span class="image-number"
+                            aria-hidden="true">
+                            06
+                        </span>
+
+                    </div>
+
+                    <figcaption>
+
+                        <span class="location">
+                            Kyoto
+                        </span>
+
+                        <span class="caption-title">
+                            Between Worlds
+                        </span>
+
+                    </figcaption>
+
+                </figure>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STORY ================= -->
+
+        <section id="story" class="story-section"
+            aria-labelledby="story-title">
+
+            <div class="story-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1528164344705-47542687000d?auto=format&fit=crop&w=1400&q=85"
+                    alt="Japanese landscape with a traditional building and mountains"
+                >
+
+            </div>
+
+            <div class="story-content">
+
+                <p class="section-number">
+                    02 / 02
+                </p>
+
+                <h2 id="story-title">
+                    Japan changes
+                    <br>
+                    after dark.
+                </h2>
+
+                <p>
+                    The same streets can feel completely different when
+                    the sun disappears. Neon signs wake up, wooden doors
+                    close, trains become quieter, and the city slowly
+                    reveals another personality.
+                </p>
+
+                <p>
+                    This gallery is a small collection of those contrasts:
+                    modern and traditional, crowded and quiet, bright and
+                    almost completely dark.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section id="about" class="about-section"
+            aria-labelledby="about-title">
+
+            <div>
+
+                <p class="section-number">
+                    ABOUT
+                </p>
+
+                <h2 id="about-title">
+                    Look closer.
+                </h2>
+
+            </div>
+
+            <div class="about-text">
+
+                <p>
+                    This interactive gallery was created as a JavaScript
+                    accessibility project. Every photograph includes
+                    alternative text, and every gallery item can be
+                    reached using a keyboard.
+                </p>
+
+                <p>
+                    Try pressing <strong>Tab</strong> to move through the
+                    photographs. When a photograph receives focus, it
+                    appears in the large preview above.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            JP<span>.</span>
+        </div>
+
+        <p>
+            Interactive Photo Gallery
+        </p>
+
+        <p>
+            Built with HTML • CSS • JavaScript
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
